@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">(V)____(*,,,*)____(V)</string>
+    <string name="show_activity">Show Second Activity</string>
+    <string name="send_button_text">Share your shit</string>
+    <string name="input_message_hint">Type your shit here …</string>
+    <string name="key_message">message</string>
+    <string name="hello_text">Your mom says Hi!</string>
+</resources>
