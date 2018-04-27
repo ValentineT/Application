@@ -1,4 +1,4 @@
-package com.example.valentine.myapplication;
+package com.example.valentine.myapplication.ui;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -8,11 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.valentine.myapplication.R;
+import com.example.valentine.myapplication.ui.threads.ThreadsExerciseActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText inputMessage;
     private Button showActivityBtn;
+    private Button catsBtn;
     private Button sendEmailBtn;
+    private Button layoutTestBtn;
+    private Button threadsBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +27,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         inputMessage = findViewById(R.id.inputMessage);
+
+        layoutTestBtn = findViewById(R.id.buttonLayout);
+        layoutTestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LayoutTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        catsBtn = findViewById(R.id.buttonCats);
+        catsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CatsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         showActivityBtn = findViewById(R.id.buttonActivity);
         showActivityBtn.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +69,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        threadsBtn = findViewById(R.id.buttonExerciseThreads);
+        threadsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ThreadsExerciseActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
+
+
 
     @NonNull
     private String getMessage() {

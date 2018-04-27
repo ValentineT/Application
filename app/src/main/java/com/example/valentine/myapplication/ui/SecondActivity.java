@@ -1,9 +1,11 @@
-package com.example.valentine.myapplication;
+package com.example.valentine.myapplication.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.example.valentine.myapplication.R;
 
 public class SecondActivity extends AppCompatActivity {
 
